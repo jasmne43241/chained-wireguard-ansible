@@ -52,9 +52,9 @@
   - name: Generate client config
     template:
       src: "templates/gate0.conf"
-      dest: "{{ lookup('env', 'HOME') }}/gate0.conf"
-      owner: "{{ lookup('env', 'USER') }}"
-      group: "{{ lookup('env', 'USER') }}"
+      dest: "~/gate0.conf"
+      owner: root
+      group: root
       mode: 0600
 
   - name: Enable and start WireGuard interface
