@@ -52,9 +52,9 @@
   - name: Generate client config
     template:
       src: "templates/wg0-client.conf"
-      dest: "{{ lookup('env', 'HOME') }}/wg0.conf"
-      owner: "{{ lookup('env', 'USER') }}"
-      group: "{{ lookup('env', 'USER') }}"
+      dest: "~/vpn0.conf"
+      owner: root
+      group: root
       mode: 0600
 
   - name: Enable and start WireGuard interface
